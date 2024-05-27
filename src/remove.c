@@ -5,28 +5,25 @@
 ** remove.c
 */
 
-#include "../include/clists.h"
+#include "../C-lists.h"
 
-void remove_node(list_t **list, void *data)
+void remove_node(list_t **list, int data)
 {
     list_t *tmp = *list;
     list_t *prev = NULL;
 
     if (!tmp)
         return;
-    /* Those are just comparison examples but you should modify
-    ** with the data you want to compare
-    **
-    ** if (tmp->data == data) {
-    **     *list = tmp->next;
-    **     free(tmp);
-    **     return;
-    ** }
-    ** while (tmp && tmp->data != data) {
-    **     prev = tmp;
-    **     tmp = tmp->next;
-    ** }
-    */
+    // The following lines are comparison examples that you should modify with what your data actually is
+    if (tmp->data == data) {
+        *list = tmp->next;
+        free(tmp);
+        return;
+    }
+    while (tmp && tmp->data != data) {
+        prev = tmp;
+        tmp = tmp->next;
+    }
     if (!tmp)
         return;
     prev->next = tmp->next;

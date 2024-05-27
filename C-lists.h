@@ -12,12 +12,13 @@
 #include <stdio.h>
 
 typedef struct list_s {
-    void *data;
+    int data;
     struct list_s *next;
 } list_t;
 
-list_t *create_node(void *data);
-void append_node(list_t **list, void *data);
-void remove_node(list_t **list, void *data);
+list_t *create_node(int data);
+void append_node(list_t **list, int data);
+void remove_node(list_t **list, int data);
+void merge_sort(list_t **list);
 
 #endif
