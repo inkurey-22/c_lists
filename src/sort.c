@@ -15,6 +15,7 @@ list_t* sorted_merge(list_t* a, list_t* b)
         return b;
     else if (b == NULL)
         return a;
+    // Same as remove.c, you should modify the following lines with what your data actually is
     if (a->data <= b->data) {
         result = a;
         result->next = sorted_merge(a->next, b);

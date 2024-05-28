@@ -11,6 +11,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/*
+** The structure, and especially its data
+** is just an example. You should modify it
+** to fit your needs.
+**
+** The same applies for the functions below,
+** you should modify the comparisons and the
+** data type in the definition to fit your needs.
+*/
+
 typedef struct list_s {
     int data;
     struct list_s *next;
