@@ -7,7 +7,7 @@
 
 #include "../C-lists.h"
 
-list_t *create_node(int data)
+list_t *create_node(void *data)
 {
     list_t *node = malloc(sizeof(list_t));
 
