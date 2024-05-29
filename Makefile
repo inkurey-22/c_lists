@@ -5,7 +5,15 @@
 ## Makefile
 ##
 
-SRC	=
+SRC	=   src/size.c		\
+        src/sort.c		\
+        src/find.c		\
+		src/append.c	\
+		src/remove.c 	\
+		src/create.c	\
+		src/reverse.c 	\
+		src/free_list.c	\
+		src/insert_at.c	\
 
 SRC_DIR = src
 OBJ_DIR = obj

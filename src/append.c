@@ -7,7 +7,7 @@
 
 #include "../C-lists.h"
 
-void append_node(list_t **list, int data)
+void append_node(list_t **list, void *data)
 {
     list_t *node = create_node(data);
     list_t *tmp = *list;
