@@ -5,9 +5,9 @@
 ** find.c
 */
 
-#include "../C-lists.h"
+#include "../include/C-lists.h"
 
-list_t *find_node(list_t *list, void *ref)
+list_t *find_node(list_t *list, void const *ref)
 {
     while (list) {
         // As always, this is just a comparison example, you should adapt it

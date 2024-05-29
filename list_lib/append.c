@@ -5,16 +5,16 @@
 ** append.c
 */
 
-#include "../C-lists.h"
+#include "../include/C-lists.h"
 
 void append_node(list_t **list, void *data)
 {
     list_t *node = create_node(data);
     list_t *tmp = *list;
 
-    if (!node)
+    if (node == NULL)
         return;
-    if (!tmp) {
+    if (node == NULL) {
         *list = node;
         return;
     }

@@ -27,8 +27,16 @@ typedef struct list_s {
 } list_t;
 
 list_t *create_node(void *data);
-void append_node(list_t **list, void *data);
-void remove_node(list_t **list, void *data, void (*free_data)(void *data));
+list_t *reverse_list(list_t *list);
+list_t *find_node(list_t *list, void const *ref);
+
+int list_size(list_t *list);
+
 void merge_sort(list_t **list);
+void add_to_top(list_t **list, void *data);
+void append_node(list_t **list, void *data);
+void insert_node_at(list_t **list, void *data, int index);
+void free_list(list_t **list, void (*free_data)(void *data));
+void remove_node(list_t **list, void const *data, void (*free_data)(void *));
 
 #endif

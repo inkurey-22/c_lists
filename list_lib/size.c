@@ -5,7 +5,7 @@
 ** size.c
 */
 
-#include "../C-lists.h"
+#include "../include/C-lists.h"
 
 int list_size(list_t *list)
 {

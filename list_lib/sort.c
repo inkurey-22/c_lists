@@ -5,7 +5,7 @@
 ** sort.c
 */
 
-#include "../C-lists.h"
+#include "../include/C-lists.h"
 
 list_t* sorted_merge(list_t* a, list_t* b)
 {
@@ -13,7 +13,7 @@ list_t* sorted_merge(list_t* a, list_t* b)
 
     if (a == NULL)
         return b;
-    else if (b == NULL)
+    if (b == NULL)
         return a;
     // Same as remove.c, you should modify the following lines with what your data actually is
     if (a->data <= b->data) {
@@ -52,7 +52,7 @@ void merge_sort(list_t** list)
     list_t* a;
     list_t* b;
 
-    if ((head == NULL) || (head->next == NULL))
+    if (head == NULL || head->next == NULL)
         return;
     split(head, &a, &b);
     merge_sort(&a);

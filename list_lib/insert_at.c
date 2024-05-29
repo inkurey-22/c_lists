@@ -5,18 +5,18 @@
 ** insert_at.c
 */
 
-#include "../C-lists.h"
+#include "../include/C-lists.h"
 
-void insert_node_at(list_t **list, void *data, int index)
+void insert_node_at(list_t **list, void *data, int const index)
 {
     list_t *node = create_node(data);
     list_t *tmp = *list;
     list_t *prev = NULL;
     int i = 0;
 
-    if (!node)
+    if (node == NULL)
         return;
-    if (!tmp) {
+    if (tmp == NULL) {
         *list = node;
         return;
     }
