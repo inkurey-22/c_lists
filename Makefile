@@ -5,17 +5,17 @@
 ## Makefile
 ##
 
-SRC	=   src/size.c		\
-        src/sort.c		\
-        src/find.c		\
-		src/append.c	\
-		src/remove.c 	\
-		src/create.c	\
-		src/reverse.c 	\
-		src/free_list.c	\
-		src/insert_at.c	\
+SRC	=   list_lib/size.c		\
+        list_lib/sort.c		\
+        list_lib/find.c		\
+		list_lib/append.c	\
+		list_lib/remove.c 	\
+		list_lib/create.c	\
+		list_lib/reverse.c 	\
+		list_lib/free_list.c	\
+		list_lib/insert_at.c	\
 
-SRC_DIR = src
+SRC_DIR = list_lib
 OBJ_DIR = obj
 
 OBJ	= $(SRC:src/%.c=obj/%.o)
