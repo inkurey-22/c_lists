@@ -14,7 +14,7 @@ void append_node(list_t **list, void *data)
 
     if (node == NULL)
         return;
-    if (node == NULL) {
+    if (*list == NULL) {
         *list = node;
         return;
     }

@@ -14,7 +14,8 @@ void free_list(list_t **list, void (*free_data)(void *data))
 
     while (tmp) {
         next = tmp->next;
-        free_data(tmp->data);
+        if (free_data != NULL)
+            free_data(tmp->data);
         free(tmp);
         tmp = next;
     }
