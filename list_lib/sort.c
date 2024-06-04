@@ -29,10 +29,8 @@ list_t* sorted_merge(list_t* a, list_t* b)
 
 void split(list_t* src, list_t** front, list_t** back)
 {
-    list_t* fast;
-    list_t* slow;
-    slow = src;
-    fast = src->next;
+    list_t* slow = src;
+    list_t* fast = src->next;
 
     while (fast != NULL) {
         fast = fast->next;
