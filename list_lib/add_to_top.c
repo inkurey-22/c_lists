@@ -5,7 +5,7 @@
 ** add_to_top.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 void add_to_top(list_t **list, void *data)
 {

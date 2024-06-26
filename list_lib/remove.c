@@ -5,7 +5,7 @@
 ** remove.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 /*
 ** void (*free_data)(void *data) is a function pointer

@@ -5,7 +5,7 @@
 ** create.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 list_t *create_node(void *data)
 {

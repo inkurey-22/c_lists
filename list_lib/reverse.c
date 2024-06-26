@@ -5,7 +5,7 @@
 ** reverse.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 list_t *reverse_list(list_t *list)
 {

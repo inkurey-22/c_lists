@@ -5,7 +5,7 @@
 ** append.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 void append_node(list_t **list, void *data)
 {

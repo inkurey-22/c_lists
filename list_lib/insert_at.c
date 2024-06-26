@@ -5,7 +5,7 @@
 ** insert_at.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 void insert_node_at(list_t **list, void *data, int const index)
 {

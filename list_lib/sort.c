@@ -5,7 +5,7 @@
 ** sort.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 list_t* sorted_merge(list_t* a, list_t* b)
 {

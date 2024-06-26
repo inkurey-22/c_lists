@@ -5,7 +5,7 @@
 ** find.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 list_t *find_node(list_t *list, void const *ref)
 {

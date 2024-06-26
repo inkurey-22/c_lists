@@ -5,7 +5,7 @@
 ** free_list.c
 */
 
-#include "../include/C-lists.h"
+#include "lists.h"
 
 void free_list(list_t **list, void (*free_data)(void *data))
 {
