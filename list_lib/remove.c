@@ -14,6 +14,9 @@
 ** It's up to you to implement this function
 */
 
+/*
+**  Removes the node with the given data using the function pointer passed as parameter
+*/
 void remove_node(list_t **list, void const *data, void (*free_data)(void *))
 {
     list_t *tmp = *list;

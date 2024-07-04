@@ -7,6 +7,9 @@
 
 #include "lists.h"
 
+/*
+** Frees the list and its data using the function pointer passed as parameter 
+*/
 void free_list(list_t **list, void (*free_data)(void *data))
 {
     list_t *tmp = *list;

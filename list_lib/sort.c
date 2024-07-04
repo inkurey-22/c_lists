@@ -7,6 +7,12 @@
 
 #include "lists.h"
 
+
+/*
+** Merge two sorted lists
+** How it works: Compare the first element of each list, add the smallest to the result list
+** and call the function again with the next element of the list that had the smallest element
+*/
 list_t* sorted_merge(list_t* a, list_t* b)
 {
     list_t* result = NULL;
@@ -27,6 +33,10 @@ list_t* sorted_merge(list_t* a, list_t* b)
     return result;
 }
 
+/*
+**  Split the list in two parts
+**  How it works: slow pointer moves one step at a time, fast pointer moves two steps at a time
+*/
 void split(list_t* src, list_t** front, list_t** back)
 {
     list_t* slow = src;
@@ -44,6 +54,10 @@ void split(list_t* src, list_t** front, list_t** back)
     slow->next = NULL;
 }
 
+/*
+**  Merge sort algorithm
+**  How it works: split the list in two parts, sort each part and merge them back together
+*/
 void merge_sort(list_t** list)
 {
     list_t* head = *list;

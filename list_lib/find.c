@@ -7,6 +7,10 @@
 
 #include "lists.h"
 
+
+/*
+**  Finds a node in the list with the given reference
+*/
 list_t *find_node(list_t *list, void const *ref)
 {
     while (list) {

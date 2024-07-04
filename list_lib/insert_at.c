@@ -7,6 +7,9 @@
 
 #include "lists.h"
 
+/*
+**  Inserts a node with the given data at the specified index
+*/
 void insert_node_at(list_t **list, void *data, int const index)
 {
     list_t *node = create_node(data);
