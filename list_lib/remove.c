@@ -15,7 +15,8 @@
 */
 
 /*
-**  Removes the node with the given data using the function pointer passed as parameter
+** Removes the node with the given data
+** using the function pointer passed as parameter
 */
 void remove_node(list_t **list, void const *data, void (*free_data)(void *))
 {
@@ -24,7 +25,8 @@ void remove_node(list_t **list, void const *data, void (*free_data)(void *))
 
     if (tmp == NULL)
         return;
-    // The following lines are comparison examples that you should modify with what your data actually is
+    // The following lines are comparison examples that you should
+    // modify with what your data actually is
     if (tmp->data == data) {
         *list = tmp->next;
         free_data(tmp->data);

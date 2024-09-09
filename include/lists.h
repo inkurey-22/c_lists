@@ -1,15 +1,15 @@
 /*
 ** Théophile "Inkurey22" R.
-** C-lists_lib
+** c_lists
 ** File description:
-** C-lists.h
+** Header file
 */
 
 #ifndef CLISTS_H
     #define CLISTS_H
 
-#include <stdlib.h>
-#include <stdio.h>
+    #include <stdlib.h>
+    #include <stdio.h>
 
 /*
 ** The structure, and especially its data
