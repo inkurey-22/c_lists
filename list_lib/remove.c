@@ -18,22 +18,22 @@
 ** Removes the node with the given data
 ** using the function pointer passed as parameter
 */
-void remove_node(list_t **list, void const *data, void (*free_data)(void *))
+void remove_node(list_t **list, void const *data, void (*free_data)(void *),
+    int (*cmp)(void const *data, void const *ref))
 {
     list_t *tmp = *list;
     list_t *prev = NULL;
 
     if (tmp == NULL)
         return;
-    // The following lines are comparison examples that you should
-    // modify with what your data actually is
-    if (tmp->data == data) {
+
+    if (cmp(tmp->data, data) == 0) {
         *list = tmp->next;
         free_data(tmp->data);
         free(tmp);
         return;
     }
-    while (tmp && tmp->data != data) {
+    while (tmp && cmp(tmp->data, data) != 0) {
         prev = tmp;
         tmp = tmp->next;
     }

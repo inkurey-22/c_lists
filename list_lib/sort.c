@@ -7,7 +7,6 @@
 
 #include "lists.h"
 
-
 /*
 ** Merge two sorted lists
 ** How it works: Compare the first element of each list,
@@ -15,7 +14,8 @@
 ** and call the function again with the next element of the list
 ** that had the smallest element
 */
-list_t *sorted_merge(list_t *a, list_t *b)
+list_t *sorted_merge(list_t *a, list_t *b,
+    int (*cmp)(void const *data1, void const *data2))
 {
     list_t *result = NULL;
 
@@ -23,14 +23,12 @@ list_t *sorted_merge(list_t *a, list_t *b)
         return b;
     if (b == NULL)
         return a;
-    // Same as remove.c, you should modify the following lines with what
-    // your data actually is
-    if (a->data <= b->data) {
+    if (cmp(a->data, b->data) <= 0) {
         result = a;
-        result->next = sorted_merge(a->next, b);
+        result->next = sorted_merge(a->next, b, cmp);
     } else {
         result = b;
-        result->next = sorted_merge(a, b->next);
+        result->next = sorted_merge(a, b->next, cmp);
     }
     return result;
 }
@@ -62,7 +60,8 @@ void split(list_t *src, list_t **front, list_t **back)
 ** How it works: split the list in two parts,
 ** sort each part and merge them back together
 */
-void merge_sort(list_t **list)
+void merge_sort(list_t **list,
+    int (*cmp)(void const *data1, void const *data2))
 {
     list_t *head = *list;
     list_t *a;
@@ -71,7 +70,7 @@ void merge_sort(list_t **list)
     if (head == NULL || head->next == NULL)
         return;
     split(head, &a, &b);
-    merge_sort(&a);
-    merge_sort(&b);
-    *list = sorted_merge(a, b);
+    merge_sort(&a, cmp);
+    merge_sort(&b, cmp);
+    *list = sorted_merge(a, b, cmp);
 }

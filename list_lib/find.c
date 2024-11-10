@@ -7,18 +7,17 @@
 
 #include "lists.h"
 
-
 /*
 **  Finds a node in the list with the given reference
 */
-list_t *find_node(list_t *list, void const *ref)
+list_t *find_node(list_t *list, void const *ref,
+    int (*cmp)(void const *data, void const *ref))
 {
     while (list) {
-        // As always, this is just a comparison example, you should adapt it
-        if (list->data == ref)
+        if (cmp(list->data, ref) == 0)
             return list;
         list = list->next;
     }
-    fprintf(stderr, "Error: no node found\n");
+    dprintf(2, "Error: no node found\n");
     return NULL;
 }
