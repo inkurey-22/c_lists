@@ -1,8 +1,8 @@
 /*
-** Théophile "Inkurey22" R.
-** C-lists_lib
+** EPITECH PROJECT, 2024
+** c_lists
 ** File description:
-** find.c
+** find node
 */
 
 #include "lists.h"

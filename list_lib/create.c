@@ -1,12 +1,12 @@
 /*
-** Théophile "Inkurey22" R.
-** C-lists_lib
+** EPITECH PROJECT, 2024
+** c_lists
 ** File description:
-** create.c
+** create node
 */
 
-#include "lists.h"
 
+#include "lists.h"
 
 /*
 **  Creates a new node with the given data

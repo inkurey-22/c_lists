@@ -1,8 +1,8 @@
 /*
-** Théophile "Inkurey22" R.
-** C-lists_lib
+** EPITECH PROJECT, 2024
+** c_lists
 ** File description:
-** remove.c
+** remove node
 */
 
 #include "lists.h"
@@ -26,7 +26,6 @@ void remove_node(list_t **list, void const *data, void (*free_data)(void *),
 
     if (tmp == NULL)
         return;
-
     if (cmp(tmp->data, data) == 0) {
         *list = tmp->next;
         free_data(tmp->data);

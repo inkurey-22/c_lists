@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2024
-** C-lists_lib
+** c_lists
 ** File description:
-** add_to_top.c
+** add to top
 */
 
 #include "lists.h"

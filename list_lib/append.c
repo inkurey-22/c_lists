@@ -1,12 +1,11 @@
 /*
-** Théophile "Inkurey22" R.
-** C-lists_lib
+** EPITECH PROJECT, 2024
+** c_lists
 ** File description:
-** append.c
+** append
 */
 
 #include "lists.h"
-
 
 /*
 ** Appends a node to the end of the list
